@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumi｜女性のためのパーソナルジム（見本サイト）</title>
+<meta name="description" content="はじめてでも、笑顔で続けられる。女性トレーナーがマンツーマンで寄り添うパーソナルジム Lumi。無料体験受付中。※提案用の見本サイトです。">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --pink:#E9668F; --pink-d:#D24D78; --pink-l:#FFF1F5; --pink-m:#FBD3DF;
+  --mint:#7FD1C3; --mint-l:#E8F7F4; --lemon:#FFD66B; --lemon-l:#FFF8E1;
+  --ink:#3A3236; --ink-2:#6E6469; --line:#F1E4E9; --bg:#FFFFFF;
+  --r:20px; --shadow:0 8px 24px rgba(233,102,143,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:"Zen Maru Gothic",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.en{font-family:"Quicksand",sans-serif;letter-spacing:.08em}
+.wrap{width:min(1080px,100% - 32px);margin-inline:auto}
+section{padding:80px 0}
+.sec-head{text-align:center;margin-bottom:40px}
+.sec-head .en{display:block;color:var(--pink);font-weight:700;font-size:14px}
+.sec-head h2{font-size:clamp(24px,4vw,32px);font-weight:700;line-height:1.5}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .15s, box-shadow .15s;cursor:pointer;border:0;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--pink);color:#fff;padding:16px 32px;font-size:17px;box-shadow:0 6px 0 var(--pink-d)}
+.btn-main:hover{box-shadow:0 8px 0 var(--pink-d)}
+.btn-line{background:#06C755;color:#fff;padding:16px 28px;font-size:16px}
+.btn small{font-weight:500;font-size:12px;opacity:.9}
+
+/* sample notice */
+.notice{background:var(--ink);color:#fff;font-size:12px;text-align:center;padding:6px 16px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:baseline;gap:8px;text-decoration:none}
+.logo b{font-family:"Quicksand";font-size:28px;color:var(--pink);letter-spacing:.04em}
+.logo span{font-size:11px;color:var(--ink-2)}
+nav ul{display:flex;gap:24px;list-style:none;font-size:14px}
+nav a{text-decoration:none}
+nav a:hover{color:var(--pink)}
+.hd .btn-main{padding:10px 20px;font-size:14px;box-shadow:0 4px 0 var(--pink-d)}
+.logo span{white-space:nowrap}
+@media (max-width:860px){nav{display:none}.hd>.btn-main{display:none}}
+
+/* hero */
+.hero{position:relative;padding:48px 0 72px;background:linear-gradient(180deg,var(--pink-l),#fff);overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;z-index:0}
+.hero::before{width:280px;height:280px;background:var(--lemon-l);top:-80px;left:-80px}
+.hero::after{width:200px;height:200px;background:var(--mint-l);bottom:40px;right:-60px}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero .tag{display:inline-block;background:#fff;color:var(--pink);border:1.5px solid var(--pink);border-radius:999px;font-size:13px;font-weight:700;padding:4px 14px;margin-bottom:16px}
+.hero h1{font-size:clamp(30px,5.4vw,48px);line-height:1.45;font-weight:700;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--pink);background:linear-gradient(transparent 62%,var(--lemon) 62%)}
+.hero p.lead{color:var(--ink-2);margin-bottom:24px}
+.badges{display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap}
+.badge{width:96px;height:96px;border-radius:50%;background:#fff;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:13px;font-weight:700;line-height:1.35}
+.badge i{font-style:normal;font-size:22px;line-height:1.2}
+.badge:nth-child(2){border:2px solid var(--mint)}.badge:nth-child(1){border:2px solid var(--pink-m)}.badge:nth-child(3){border:2px solid var(--lemon)}
+.hero-cta{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.hero-cta .note{font-size:13px;color:var(--ink-2)}
+.hero-img{position:relative}
+.hero-img img{border-radius:200px 200px var(--r) var(--r);aspect-ratio:4/5;object-fit:cover;width:100%;box-shadow:var(--shadow)}
+.hero-img .price{position:absolute;left:-24px;bottom:32px;background:#fff;border-radius:16px;padding:12px 18px;box-shadow:var(--shadow);font-size:13px;line-height:1.5}
+.hero-img .price b{display:block;color:var(--pink);font-size:22px}
+@media (max-width:860px){
+  .hero{padding-top:24px}
+  .hero-in{grid-template-columns:1fr;gap:28px}
+  .hero-img{order:-1;width:100%;max-width:520px;margin-inline:auto}
+  .hero-img img{aspect-ratio:16/10;border-radius:var(--r);object-position:center 30%}
+  .hero-img .price{left:12px;bottom:-18px;padding:8px 14px}
+  .hero-img .price{white-space:nowrap}
+  .hero-img .price b{font-size:18px;display:inline;margin-left:4px}
+  .hero-img .price .camp{display:none}
+  .hero-text{padding-top:8px}
+  .badges{justify-content:center}
+  .hero-text{text-align:center}
+  .hero-cta{align-items:center}
+}
+
+/* worries */
+.worries{background:#fff}
+.worry-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:760px;margin:0 auto 32px}
+.worry-list li{list-style:none;background:var(--pink-l);border-radius:14px;padding:16px 18px 16px 48px;position:relative;font-weight:500}
+.worry-list li::before{content:"✓";position:absolute;left:16px;top:15px;width:22px;height:22px;border-radius:50%;background:var(--pink);color:#fff;font-size:12px;display:grid;place-items:center}
+.worry-answer{text-align:center;font-size:clamp(18px,3vw,22px);font-weight:700}
+.worry-answer span{color:var(--pink)}
+@media (max-width:640px){.worry-list{grid-template-columns:1fr}}
+
+/* reasons */
+.reasons{background:var(--mint-l)}
+.reason{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:48px}
+.reason:last-child{margin-bottom:0}
+.reason:nth-child(even) .reason-img{order:2}
+.reason-img img{border-radius:var(--r);aspect-ratio:4/3;object-fit:cover;width:100%}
+.reason .num{font-family:"Quicksand";font-weight:700;color:var(--pink);font-size:14px}
+.reason .num b{font-size:40px;margin-left:4px}
+.reason h3{font-size:22px;line-height:1.5;margin:4px 0 12px}
+.reason p{color:var(--ink-2)}
+@media (max-width:760px){.reason{grid-template-columns:1fr;gap:16px}.reason:nth-child(even) .reason-img{order:0}}
+
+/* program */
+.programs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.program{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:28px 24px;text-align:center}
+.program .ic{width:64px;height:64px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;font-size:28px}
+.program:nth-child(1) .ic{background:var(--pink-l)}.program:nth-child(2) .ic{background:var(--mint-l)}.program:nth-child(3) .ic{background:var(--lemon-l)}
+.program h3{font-size:18px;margin-bottom:8px}
+.program p{font-size:14px;color:var(--ink-2);text-align:left}
+@media (max-width:760px){.programs{grid-template-columns:1fr}}
+
+/* price */
+.price-sec{background:var(--pink-l)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plan{background:#fff;border-radius:var(--r);padding:32px 24px;text-align:center;position:relative;box-shadow:var(--shadow)}
+.plan.pop{border:2.5px solid var(--pink)}
+.plan .ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--pink);color:#fff;font-size:12px;font-weight:700;padding:4px 14px;border-radius:999px;white-space:nowrap}
+.plan h3{font-size:18px}
+.plan .times{font-size:13px;color:var(--ink-2)}
+.plan .yen{font-family:"Quicksand";font-weight:700;font-size:36px;color:var(--pink);margin:12px 0 4px}
+.plan .yen small{font-family:"Zen Maru Gothic";font-size:14px;color:var(--ink)}
+.plan .per{font-size:13px;color:var(--ink-2);margin-bottom:16px}
+.plan ul{list-style:none;text-align:left;font-size:14px;border-top:1px dashed var(--line);padding-top:14px}
+.plan li{padding-left:20px;position:relative;margin-bottom:4px}
+.plan li::before{content:"●";color:var(--mint);position:absolute;left:0;font-size:10px;top:6px}
+.price-note{text-align:center;margin-top:28px;font-size:14px}
+.price-note b{background:var(--lemon);padding:2px 10px;border-radius:6px}
+@media (max-width:860px){.plans{grid-template-columns:1fr;max-width:420px;margin-inline:auto;gap:28px}}
+
+/* trainers */
+.trainers{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:860px;margin-inline:auto}
+.trainer{display:flex;gap:20px;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:20px;align-items:flex-start}
+.trainer img{width:112px;height:112px;border-radius:50%;object-fit:cover;flex-shrink:0;border:4px solid var(--pink-l)}
+.trainer .role{font-size:12px;color:var(--pink);font-weight:700}
+.trainer h3{font-size:20px;line-height:1.4}
+.trainer h3 .en{font-size:12px;color:var(--ink-2);margin-left:6px}
+.trainer .lic{font-size:12px;color:var(--ink-2);margin:4px 0 8px}
+.trainer p{font-size:14px}
+@media (max-width:760px){.trainers{grid-template-columns:1fr}}
+@media (max-width:420px){.trainer{flex-direction:column;align-items:center;text-align:center}}
+
+/* voices */
+.voices-sec{background:var(--lemon-l)}
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.voice{background:#fff;border-radius:var(--r);padding:24px;position:relative}
+.voice::after{content:"";position:absolute;bottom:-12px;left:32px;border:12px solid transparent;border-top-color:#fff;border-bottom:0}
+.voice .who{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.voice .av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:20px;background:var(--pink-l)}
+.voice .who b{font-size:15px;display:block;line-height:1.4}
+.voice .who span{font-size:12px;color:var(--ink-2)}
+.voice .stars{color:#F5B83B;font-size:14px;letter-spacing:2px}
+.voice p{font-size:14px}
+@media (max-width:860px){.voices{grid-template-columns:1fr;gap:32px;max-width:520px;margin-inline:auto}}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+.step{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:24px 18px;text-align:center;position:relative}
+.step::before{counter-increment:step;content:"STEP " counter(step);display:inline-block;font-family:"Quicksand";font-weight:700;font-size:12px;color:#fff;background:var(--pink);border-radius:999px;padding:2px 12px;margin-bottom:10px}
+.step .ic{font-size:30px;margin-bottom:6px}
+.step h3{font-size:16px;margin-bottom:6px}
+.step p{font-size:13px;color:var(--ink-2);text-align:left}
+.step:not(:last-child)::after{content:"";position:absolute;right:-12px;top:50%;border:7px solid transparent;border-left:9px solid var(--pink-m);transform:translateY(-50%)}
+@media (max-width:860px){.flow{grid-template-columns:1fr;max-width:420px;margin-inline:auto;gap:24px}.step:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-20px;transform:translateX(-50%);border:8px solid transparent;border-top:10px solid var(--pink-m)}}
+
+/* faq */
+.faq-sec{background:var(--mint-l)}
+.faq{max-width:760px;margin-inline:auto}
+.faq details{background:#fff;border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:18px 52px 18px 52px;font-weight:700;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"Q";position:absolute;left:18px;top:16px;font-family:"Quicksand";color:var(--pink);font-size:20px}
+.faq summary::after{content:"+";position:absolute;right:20px;top:14px;font-size:22px;color:var(--pink);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 20px 18px 52px;color:var(--ink-2);font-size:15px;position:relative}
+.faq .a::before{content:"A";position:absolute;left:20px;top:-2px;font-family:"Quicksand";font-weight:700;color:var(--mint);font-size:20px}
+
+/* news */
+.news{max-width:760px;margin-inline:auto;list-style:none;border-top:1px solid var(--line)}
+.news li{display:flex;gap:16px;padding:16px 4px;border-bottom:1px solid var(--line);align-items:baseline;flex-wrap:wrap}
+.news time{font-family:"Quicksand";font-weight:700;font-size:14px;color:var(--ink-2)}
+.news .cat{font-size:11px;font-weight:700;padding:2px 10px;border-radius:999px;background:var(--pink-l);color:var(--pink)}
+.news .cat.c2{background:var(--mint-l);color:#2F9C8A}
+.news a{text-decoration:none;flex:1 1 280px}
+.news a:hover{color:var(--pink)}
+.news-more{text-align:center;margin-top:20px;font-size:14px}
+.news-more a{color:var(--pink)}
+
+/* access */
+.access{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.access .map{border-radius:var(--r);aspect-ratio:4/3;background:repeating-linear-gradient(45deg,var(--pink-l) 0 12px,#fff 12px 24px);display:grid;place-items:center;color:var(--ink-2);font-size:14px;border:1.5px solid var(--line)}
+.access table{width:100%;border-collapse:collapse;font-size:15px}
+.access th,.access td{text-align:left;padding:12px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.access th{width:96px;color:var(--pink);font-weight:700;white-space:nowrap}
+.studio-img{border-radius:var(--r);aspect-ratio:16/9;object-fit:cover;width:100%;margin-bottom:16px}
+@media (max-width:760px){.access{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:linear-gradient(160deg,var(--pink) 0%,#F08BAA 100%);color:#fff}
+.contact .sec-head .en{color:#fff;opacity:.85}
+.contact-lead{text-align:center;margin-bottom:28px}
+.contact-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
+.contact .btn-main{background:#fff;color:var(--pink);box-shadow:0 6px 0 rgba(0,0,0,.12)}
+form{background:#fff;color:var(--ink);border-radius:var(--r);padding:32px;max-width:640px;margin-inline:auto}
+.f-row{margin-bottom:18px}
+.f-row label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+.f-row label .req{background:var(--pink);color:#fff;font-size:11px;padding:1px 8px;border-radius:6px;margin-left:6px}
+.f-row input,.f-row select,.f-row textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-size:16px;background:#FFFCFD}
+.f-row input:focus,.f-row select:focus,.f-row textarea:focus{outline:none;border-color:var(--pink)}
+.f-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.contact form .btn-main{width:100%;margin-top:8px;background:var(--pink);color:#fff;box-shadow:0 6px 0 var(--pink-d)}
+.f-done{display:none;text-align:center;padding:12px;font-weight:700;color:var(--pink)}
+@media (max-width:520px){form{padding:22px 18px}.f-2{grid-template-columns:1fr}}
+
+/* footer */
+footer{background:var(--ink);color:#DCD3D7;padding:40px 0 100px;font-size:13px;text-align:center}
+footer .logo b{color:#fff}
+footer .credit{margin-top:14px;font-size:11px;opacity:.7}
+footer .credit a{color:inherit}
+
+/* fixed cta (sp) */
+.fixed-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);border-top:1px solid var(--line)}
+.fixed-cta .btn{flex:1;padding:13px 8px;font-size:15px}
+.fixed-cta .btn-main{box-shadow:0 4px 0 var(--pink-d)}
+@media (max-width:860px){.fixed-cta{display:flex}}
+</style>
+</head>
+<body>
+
+<div class="notice">※ これは提案用の見本サイトです。店名・料金・写真・お客様の声などはすべて仮のものです。</div>
+
+<header>
+  <div class="wrap hd">
+    <a href="#top" class="logo"><b>Lumi</b><span>女性のためのパーソナルジム</span></a>
+    <nav><ul>
+      <li><a href="#reasons">選ばれる理由</a></li>
+      <li><a href="#price">料金</a></li>
+      <li><a href="#trainer">トレーナー</a></li>
+      <li><a href="#voice">お客様の声</a></li>
+      <li><a href="#faq">よくある質問</a></li>
+      <li><a href="#access">アクセス</a></li>
+    </ul></nav>
+    <a href="#contact" class="btn btn-main">無料体験予約</a>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-text">
+      <span class="tag">2027年1月 ○○駅前にNEW OPEN</span>
+      <h1>はじめてでも、<br><em>笑顔で続けられる</em><br>パーソナルジム。</h1>
+      <p class="lead">女性トレーナーがマンツーマンで寄り添います。<br>運動が苦手な方、ジムがはじめての方こそ大歓迎です。</p>
+      <div class="badges">
+        <div class="badge"><i>👟</i>手ぶらで<br>OK</div>
+        <div class="badge"><i>🌸</i>女性<br>トレーナー</div>
+        <div class="badge"><i>🚪</i>完全個室<br>で安心</div>
+      </div>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-main">まずは無料体験に申し込む →</a>
+        <span class="note">所要時間60分・しつこい勧誘はいたしません</span>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="https://images.unsplash.com/photo-1713201435382-bb915a39be16?w=900&q=80&auto=format&fit=crop" alt="ヨガマットを持って明るいスタジオに立つ女性">
+      <div class="price">月4回コース<b>¥19,800〜</b><span class="camp">入会金 0円キャンペーン中</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORRIES -->
+<section class="worries">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">WORRIES</span><h2>こんなお悩み、ありませんか？</h2></div>
+    <ul class="worry-list">
+      <li>ダイエットを始めても、いつも続かない</li>
+      <li>ジムは筋肉ムキムキの人ばかりで怖そう</li>
+      <li>出産や年齢とともに、体型が変わってきた</li>
+      <li>何から始めればいいのか分からない</li>
+      <li>肩こり・腰痛など、体の不調が気になる</li>
+      <li>食事制限はつらいから、できれば避けたい</li>
+    </ul>
+    <p class="worry-answer">その気持ち、<span>Lumi</span>なら一緒に解決できます。</p>
+  </div>
+</section>
+
+<!-- REASONS -->
+<section class="reasons" id="reasons">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">REASONS</span><h2>Lumiが選ばれる<br>3つの理由</h2></div>
+    <div class="reason">
+      <div class="reason-img"><img src="https://images.unsplash.com/photo-1590556409324-aa1d726e5c3c?w=800&q=80&auto=format&fit=crop" alt="笑顔でトレーニングする女性とトレーナー" loading="lazy"></div>
+      <div><span class="num">REASON<b>01</b></span><h3>女性トレーナーが<br>マンツーマンでサポート</h3><p>トレーナーは全員女性。体の悩みも気軽に相談できます。一人ひとりの体力や目標に合わせて、無理のないメニューをつくります。</p></div>
+    </div>
+    <div class="reason">
+      <div class="reason-img"><img src="https://images.unsplash.com/photo-1717500252297-b09508db7ceb?w=800&q=80&auto=format&fit=crop" alt="植物のある明るいトレーニングスタジオ" loading="lazy"></div>
+      <div><span class="num">REASON<b>02</b></span><h3>完全個室だから<br>周りの目が気にならない</h3><p>トレーニング中はスタジオを貸し切り。ほかのお客様と顔を合わせることはありません。すっぴん・手ぶらで来られるよう、ウェアやタオルもご用意しています。</p></div>
+    </div>
+    <div class="reason">
+      <div class="reason-img"><img src="https://images.unsplash.com/photo-1715780463401-b9ef0567943e?w=800&q=80&auto=format&fit=crop" alt="ピラティスリングを使ったトレーニング" loading="lazy"></div>
+      <div><span class="num">REASON<b>03</b></span><h3>がまんしない食事アドバイスで<br>リバウンドしにくい</h3><p>極端な食事制限はしません。毎日の食事をLINEで送るだけで、トレーナーが「何をどれくらい食べるか」をアドバイス。卒業後も続けられる習慣が身につきます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">PROGRAM</span><h2>トレーニング内容</h2></div>
+    <div class="programs">
+      <div class="program"><div class="ic">💪</div><h3>ダイエット・ボディメイク</h3><p>筋トレと有酸素運動を組み合わせ、引き締まった体を目指します。お腹・二の腕・脚など、気になる部分を重点的に。</p></div>
+      <div class="program"><div class="ic">🧘‍♀️</div><h3>姿勢改善・ストレッチ</h3><p>猫背や反り腰を整え、肩こり・腰痛の改善をサポート。デスクワークの多い方にもおすすめです。</p></div>
+      <div class="program"><div class="ic">🍓</div><h3>食事サポート</h3><p>LINEで毎日の食事をチェック。外食やコンビニでも選べるメニューを提案するので、忙しい方でも続けられます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section class="price-sec" id="price">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">PRICE</span><h2>料金プラン</h2></div>
+    <div class="plans">
+      <div class="plan"><h3>ライト</h3><div class="times">月2回・1回50分</div><div class="yen">¥10,800<small>/月</small></div><div class="per">1回あたり ¥5,400</div><ul><li>マンツーマン指導</li><li>ウェア・タオル無料</li><li>食事アドバイス（月1回）</li></ul></div>
+      <div class="plan pop"><span class="ribbon">いちばん人気</span><h3>スタンダード</h3><div class="times">月4回・1回50分</div><div class="yen">¥19,800<small>/月</small></div><div class="per">1回あたり ¥4,950</div><ul><li>マンツーマン指導</li><li>ウェア・タオル無料</li><li>LINE食事サポート（毎日）</li></ul></div>
+      <div class="plan"><h3>しっかり集中</h3><div class="times">月8回・1回50分</div><div class="yen">¥36,800<small>/月</small></div><div class="per">1回あたり ¥4,600</div><ul><li>マンツーマン指導</li><li>ウェア・タオル無料</li><li>LINE食事サポート（毎日）</li><li>体組成測定（毎回）</li></ul></div>
+    </div>
+    <p class="price-note"><b>オープン記念</b> 先着30名さま 入会金 ¥33,000 → <strong>0円</strong></p>
+  </div>
+</section>
+
+<!-- TRAINER -->
+<section id="trainer">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">TRAINER</span><h2>トレーナー紹介</h2></div>
+    <div class="trainers">
+      <div class="trainer"><img src="https://images.unsplash.com/photo-1683848644087-c3cb69b77d4f?w=300&h=300&q=80&auto=format&fit=crop&crop=faces" alt="代表トレーナーの写真" loading="lazy"><div><span class="role">代表トレーナー</span><h3>佐藤 みゆき<span class="en">MIYUKI</span></h3><div class="lic">NSCA-CPT／食生活アドバイザー／指導歴8年</div><p>自分自身も運動が苦手でした。だからこそ「続けられる楽しさ」を大切にしています。一緒に、少しずつ変わっていきましょう！</p></div></div>
+      <div class="trainer"><img src="https://images.unsplash.com/photo-1678648349337-5d4b227a279f?w=300&h=300&q=80&auto=format&fit=crop&crop=faces" alt="トレーナーの写真" loading="lazy"><div><span class="role">トレーナー</span><h3>高橋 あおい<span class="en">AOI</span></h3><div class="lic">ピラティスインストラクター／産後ケア指導</div><p>産後の体型の変化や姿勢の悩みが得意分野です。話しやすい雰囲気づくりを心がけています。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="voices-sec" id="voice">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">VOICE</span><h2>お客様の声</h2></div>
+    <div class="voices">
+      <div class="voice"><div class="who"><div class="av">👩</div><div><b>Aさん（30代・会社員）</b><span>スタンダード 3か月</span></div></div><div class="stars">★★★★★</div><p>3か月で体重−5kg、ウエスト−8cm！ジムは怖いイメージでしたが、毎回笑顔で迎えてもらえて、通うのが楽しみになりました。</p></div>
+      <div class="voice"><div class="who"><div class="av">👩‍🍼</div><div><b>Bさん（30代・主婦）</b><span>ライト 2か月</span></div></div><div class="stars">★★★★★</div><p>産後の体型が気になって入会。個室なので人目を気にせず集中できます。腰痛も軽くなり、子どもを抱っこするのが楽になりました。</p></div>
+      <div class="voice"><div class="who"><div class="av">👩‍💼</div><div><b>Cさん（40代・自営業）</b><span>しっかり集中 4か月</span></div></div><div class="stars">★★★★★</div><p>食事の写真を送るだけで丁寧にアドバイスをもらえるので、無理なく続いています。40代でも体は変わるんだと実感しました。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section id="flow">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">FLOW</span><h2>無料体験の流れ</h2></div>
+    <div class="flow">
+      <div class="step"><div class="ic">📱</div><h3>Web・LINEで予約</h3><p>下のフォームかLINEから、ご希望の日時をお送りください。24時間受付中です。</p></div>
+      <div class="step"><div class="ic">☕</div><h3>カウンセリング</h3><p>お悩みや目標、生活リズムをお聞きします。話すだけでも大丈夫です。</p></div>
+      <div class="step"><div class="ic">🏃‍♀️</div><h3>体験トレーニング</h3><p>あなたに合わせたメニューを30分ほど体験。手ぶらでお越しください。</p></div>
+      <div class="step"><div class="ic">🌷</div><h3>ご入会</h3><p>ご納得いただけた方のみご案内します。その場で決めなくても大丈夫です。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">FAQ</span><h2>よくある質問</h2></div>
+    <div class="faq">
+      <details><summary>運動経験がまったくないのですが、大丈夫ですか？</summary><div class="a">はい、大丈夫です。会員さまの8割以上がジムはじめての方です。体力に合わせて、軽い運動から少しずつ始めます。</div></details>
+      <details><summary>何を持っていけばいいですか？</summary><div class="a">手ぶらでお越しいただけます。ウェア・シューズ・タオル・ドリンクはすべて無料でご用意しています。</div></details>
+      <details><summary>体験のあと、勧誘されませんか？</summary><div class="a">しつこい勧誘はいたしません。ご自宅でゆっくり検討していただいてから、LINEでご連絡いただく方も多いです。</div></details>
+      <details><summary>子ども連れでも通えますか？</summary><div class="a">個室のため、未就学のお子さまは同伴いただけます。ご予約時にお知らせください。</div></details>
+      <details><summary>予約の変更やキャンセルはできますか？</summary><div class="a">前日の21時までなら、LINEで無料で変更・キャンセルできます。</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">NEWS</span><h2>お知らせ</h2></div>
+    <ul class="news">
+      <li><time>2026.12.01</time><span class="cat">キャンペーン</span><a href="#">オープン記念！先着30名さま入会金0円キャンペーンを開始しました</a></li>
+      <li><time>2026.11.25</time><span class="cat c2">お知らせ</span><a href="#">無料体験のWeb予約受付を開始しました</a></li>
+      <li><time>2026.11.20</time><span class="cat c2">お知らせ</span><a href="#">2027年1月、○○駅前に「Lumi」がオープンします</a></li>
+    </ul>
+    <p class="news-more"><a href="#">お知らせ一覧を見る →</a></p>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section id="access" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">ACCESS</span><h2>店舗情報・アクセス</h2></div>
+    <div class="access">
+      <div>
+        <img class="studio-img" src="https://images.unsplash.com/photo-1783841193384-4269c68aa050?w=900&q=80&auto=format&fit=crop" alt="スタジオの内観" loading="lazy">
+        <div class="map">ここに Google マップが入ります</div>
+      </div>
+      <table>
+        <tr><th>店名</th><td>パーソナルジム Lumi（ルミ）</td></tr>
+        <tr><th>住所</th><td>〒000-0000<br>東京都○○区○○1-2-3 ○○ビル2F</td></tr>
+        <tr><th>アクセス</th><td>○○線「○○駅」東口から徒歩3分</td></tr>
+        <tr><th>営業時間</th><td>平日 9:00〜22:00<br>土日祝 9:00〜19:00</td></tr>
+        <tr><th>定休日</th><td>毎週火曜日</td></tr>
+        <tr><th>設備</th><td>完全個室2部屋／パウダールーム／更衣室</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head"><span class="en">CONTACT</span><h2>無料体験のご予約</h2></div>
+    <p class="contact-lead">入会金0円キャンペーンは先着30名さままで。<br>まずはお気軽にご相談ください。</p>
+    <div class="contact-btns">
+      <a href="#" class="btn btn-line">LINEで予約する <small>かんたん1分</small></a>
+    </div>
+    <form id="form" novalidate>
+      <div class="f-2">
+        <div class="f-row"><label for="name">お名前<span class="req">必須</span></label><input id="name" required placeholder="山田 花子"></div>
+        <div class="f-row"><label for="tel">電話番号<span class="req">必須</span></label><input id="tel" type="tel" required placeholder="090-0000-0000"></div>
+      </div>
+      <div class="f-row"><label for="mail">メールアドレス<span class="req">必須</span></label><input id="mail" type="email" required placeholder="example@mail.com"></div>
+      <div class="f-2">
+        <div class="f-row"><label for="d1">第1希望日<span class="req">必須</span></label><input id="d1" type="date" required></div>
+        <div class="f-row"><label for="t1">時間帯</label><select id="t1"><option>午前（9〜12時）</option><option>午後（12〜17時）</option><option>夜（17〜22時）</option></select></div>
+      </div>
+      <div class="f-row"><label for="goal">目的（任意）</label><select id="goal"><option>ダイエット</option><option>ボディメイク</option><option>姿勢改善・不調の改善</option><option>産後ケア</option><option>その他</option></select></div>
+      <div class="f-row"><label for="msg">ご質問など（任意）</label><textarea id="msg" rows="3" placeholder="気になることがあればご記入ください"></textarea></div>
+      <button class="btn btn-main" type="submit">この内容で予約する</button>
+      <p class="f-done" id="done">見本サイトのため、実際の送信は行われません 🌸</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <a href="#top" class="logo" style="justify-content:center"><b>Lumi</b></a>
+  <p>女性のためのパーソナルジム</p>
+  <p style="margin-top:8px">© 2026 Personal Gym Lumi（見本）</p>
+  <p class="credit">Photos: <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>（仮の写真です）</p>
+</footer>
+
+<div class="fixed-cta">
+  <a href="#" class="btn btn-line">LINE予約</a>
+  <a href="#contact" class="btn btn-main">無料体験を予約</a>
+</div>
+
+<script>
+document.getElementById('form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('done').style.display = 'block';
+});
+</script>
+</body>
+</html>
