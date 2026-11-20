@@ -49,7 +49,23 @@ nav a{text-decoration:none}
 nav a:hover{color:var(--pink)}
 .hd .btn-main{padding:10px 20px;font-size:14px;box-shadow:0 4px 0 var(--pink-d)}
 .logo span{white-space:nowrap}
-@media (max-width:860px){nav{display:none}.hd>.btn-main{display:none}}
+.menu-btn{display:none;width:44px;height:44px;border:0;background:var(--pink-l);border-radius:50%;cursor:pointer;position:relative}
+.menu-btn span{position:absolute;left:12px;width:20px;height:2px;border-radius:2px;background:var(--pink);transition:transform .25s, opacity .2s, top .25s}
+.menu-btn span:nth-child(1){top:15px}.menu-btn span:nth-child(2){top:21px}.menu-btn span:nth-child(3){top:27px}
+.menu-open .menu-btn span:nth-child(1){top:21px;transform:rotate(45deg)}
+.menu-open .menu-btn span:nth-child(2){opacity:0}
+.menu-open .menu-btn span:nth-child(3){top:21px;transform:rotate(-45deg)}
+nav .nav-cta{display:none}
+@media (max-width:860px){
+  .hd>.btn-main{display:none}
+  .menu-btn{display:block}
+  nav{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(58,50,54,.08);padding:8px 16px 20px;visibility:hidden;opacity:0;transform:translateY(-8px);transition:opacity .2s, transform .2s, visibility .2s}
+  .menu-open nav{visibility:visible;opacity:1;transform:none}
+  nav ul{flex-direction:column;gap:0;font-size:16px}
+  nav li a{display:block;padding:14px 4px;border-bottom:1px dashed var(--line)}
+  nav li a::after{content:"›";float:right;color:var(--pink)}
+  nav .nav-cta{display:flex;width:100%;margin-top:16px}
+}
 
 /* hero */
 .hero{position:relative;padding:48px 0 72px;background:linear-gradient(180deg,var(--pink-l),#fff);overflow:hidden}
@@ -238,15 +254,16 @@ footer .credit a{color:inherit}
 <header>
   <div class="wrap hd">
     <a href="#top" class="logo"><b>Lumi</b><span>女性のためのパーソナルジム</span></a>
-    <nav><ul>
+    <nav id="gnav"><ul>
       <li><a href="#reasons">選ばれる理由</a></li>
       <li><a href="#price">料金</a></li>
       <li><a href="#trainer">トレーナー</a></li>
       <li><a href="#voice">お客様の声</a></li>
       <li><a href="#faq">よくある質問</a></li>
       <li><a href="#access">アクセス</a></li>
-    </ul></nav>
+    </ul><a href="#contact" class="btn btn-main nav-cta">無料体験を予約する</a></nav>
     <a href="#contact" class="btn btn-main">無料体験予約</a>
+    <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="gnav"><span></span><span></span><span></span></button>
   </div>
 </header>
 
@@ -459,6 +476,17 @@ footer .credit a{color:inherit}
 </div>
 
 <script>
+(function () {
+  var header = document.querySelector('header');
+  var btn = document.querySelector('.menu-btn');
+  function setOpen(open) {
+    header.classList.toggle('menu-open', open);
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+  }
+  btn.addEventListener('click', function () { setOpen(!header.classList.contains('menu-open')); });
+  document.querySelectorAll('nav a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+})();
 document.getElementById('form').addEventListener('submit', function (e) {
   e.preventDefault();
   document.getElementById('done').style.display = 'block';
